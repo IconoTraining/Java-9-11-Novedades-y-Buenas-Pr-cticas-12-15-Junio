@@ -1,0 +1,59 @@
+
+jshell> 7 + 2
+$1 ==> 9
+
+jshell> String nombre = "Anabel";
+nombre ==> "Anabel"
+
+jshell> int sumar(var a, var b){
+   ...>     return a + b;
+   ...> }
+|  Error:
+|  'var' is not allowed here
+|  int sumar(var a, var b){
+|            ^-^
+|  Error:
+|  'var' is not allowed here
+|  int sumar(var a, var b){
+|                   ^-^
+
+jshell> int sumar(int a, int b){
+   ...>     return a + b;
+   ...> }
+|  created method sumar(int,int)
+
+jshell> sumar(7,5);
+$4 ==> 12
+
+jshell> String saludar(){
+   ...>     return "Hola, que tal?";
+   ...> }
+|  created method saludar()
+
+jshell> saludar();
+$6 ==> "Hola, que tal?"
+
+jshell> /list
+
+   1 : 7 + 2
+   2 : String nombre = "Anabel";
+   3 : int sumar(int a, int b){
+           return a + b;
+       }
+   4 : sumar(7,5);
+   5 : String saludar(){
+           return "Hola, que tal?";
+       }
+   6 : saludar();
+
+jshell> /set feedback verbose
+|  Feedback mode: verbose
+
+jshell> saludar();
+$7 ==> "Hola, que tal?"
+|  created scratch variable $7 : String
+
+jshell> /set feedback silent
+
+jshell> saludar();
+
